@@ -8,7 +8,7 @@
 
 ### 2. Name your repository and click _Create repository from template_.
 
-![Create repo from template](./assests/images/create-template-from-repo.png)
+![Create repo from template](./assests/images/create-repo-from-template.png)
 
 ---
 _Inspired by [JasonEtco/activity-box/README.md](https://github.com/JasonEtco/activity-box/blob/master/README.md)_
