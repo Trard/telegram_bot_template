@@ -1,9 +1,9 @@
-const bot = require('./telegram_bot');
-const localtunnel = require('localtunnel');
+const bot = require("./telegram_bot");
+const localtunnel = require("localtunnel");
 
 const bot_port = 3000;
 
-const startAll = async () => {
+const start_all = async () => {
     const tunnel = await localtunnel({ port: bot_port });
     
     bot.launch({
@@ -14,4 +14,4 @@ const startAll = async () => {
     });
 };
 
-startAll();
+start_all();

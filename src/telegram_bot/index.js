@@ -1,18 +1,18 @@
-const { Telegraf } = require('telegraf');
-const winston = require('winston');
+const { Telegraf } = require("telegraf");
+const winston = require("winston");
 
-require('dotenv').config();
+require("dotenv").config();
 
 const logger = winston.createLogger({
-    level: 'info',
+    level: "info",
     format: winston.format.json(),
     transports: [
         new winston.transports.File({
-            filename: 'logs/telegram_bot/error.log',
-            level: 'error'
+            filename: "logs/telegram_bot/error.log",
+            level: "error"
       }),
         new winston.transports.File({
-            filename: 'logs/telegram_bot/combined.log'
+            filename: "logs/telegram_bot/combined.log"
     }),
   ],
 });
