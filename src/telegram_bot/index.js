@@ -1,5 +1,6 @@
 const { Telegraf } = require("telegraf");
 const winston = require("winston");
+const middlewares = require("./middlewares");
 
 require("dotenv").config();
 
@@ -19,10 +20,6 @@ const logger = winston.createLogger({
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
-//logger middleware
-bot.use(async (ctx, next) => {
-    await next();
-    logger.info(ctx);
-});
+bot.use(middlewares.logger(logger));
 
 module.exports = bot;
