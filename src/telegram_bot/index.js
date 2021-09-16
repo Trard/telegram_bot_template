@@ -10,12 +10,12 @@ const logger = winston.createLogger({
     transports: [
         new winston.transports.File({
             filename: "logs/telegram_bot/error.log",
-            level: "error"
-      }),
+            level: "error",
+        }),
         new winston.transports.File({
-            filename: "logs/telegram_bot/combined.log"
-    }),
-  ],
+            filename: "logs/telegram_bot/combined.log",
+        }),
+    ],
 });
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
